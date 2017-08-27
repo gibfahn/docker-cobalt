@@ -1,5 +1,5 @@
 FROM alpine:3.4
-MAINTAINER Stas Rudakou "stas@garage22.net"
+MAINTAINER Gibson Fahnestock "gib@fahn.co"
 
 COPY cobalt /usr/bin/cobalt
 EXPOSE 3000

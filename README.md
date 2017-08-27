@@ -23,7 +23,7 @@ taken from submodule using `git descrbie --tags`.
 * make
 * docker client (available without `sudo`)
 * cargo
-* x86_64-unknown-linux-musl rust target
+* x86_64-unknown-linux-musl rust target (`rustup target add x86_64-unknown-linux-musl`)
 
 ## Build Process
 

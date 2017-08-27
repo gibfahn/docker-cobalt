@@ -1,5 +1,5 @@
 DOCKER=docker
-NAME=nott/cobalt
+NAME=gibfahn/cobalt
 VERSION=$(shell cd cobalt.rs && git describe --tags)
 
 .PHONY : default build-cargo build-docker build tag-latest push push-latest
@@ -7,7 +7,7 @@ VERSION=$(shell cd cobalt.rs && git describe --tags)
 default: build
 
 build-cargo:
-	cd cobalt.rs && cargo build --release --target x86_64-unknown-linux-musl
+	cd cobalt.rs && cargo build --release --target x86_64-unknown-linux-musl --features="syntax-highlight"
 	cp cobalt.rs/target/x86_64-unknown-linux-musl/release/cobalt dockerfiles/cobalt
 
 build-docker:
