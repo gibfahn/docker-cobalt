@@ -23,35 +23,48 @@ taken from submodule using `git descrbie --tags`.
 * make
 * docker client (available without `sudo`)
 * cargo
-* x86_64-unknown-linux-musl rust target (`rustup target add x86_64-unknown-linux-musl`)
+* `x86_64-unknown-linux-musl` rust target
+
+```bash
+# Install x86_64-unknown-linux-musl rust target
+rustup target add x86_64-unknown-linux-musl
+
+# Install musl-gcc compiler
+# Linux:
+sudo apt install musl-tools
+
+#macOS
+brew install musl-cross
+```
 
 ## Build Process
 
 Don't forget to checkout `cobalt.rs` submodule:
 
-```sh
-git submodule init && git submodule update
+```bash
+git submodule init
+git submodule update
 ```
 
 Build docker images:
 
-```sh
+```bash
 make
 ```
 
 Publish docker image:
 
-```sh
+```bash
 make push
 ```
 
 Publish docker image as `latest`:
 
-```sh
+```bash
 make push-latest
 ```
 
-Long story shot, in order to release a new version one needs to:
+Long story short, in order to release a new version one needs to:
 
 * update submodule so it points to a correct tag
 * build image using `make`
