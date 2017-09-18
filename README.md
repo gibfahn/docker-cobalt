@@ -1,5 +1,8 @@
 # Dockerfile for static site generator Cobalt
 
+Fork of [nott/docker-cobalt](https://github.com/nott/docker-cobalt) with syntax
+highlighting enabled.
+
 This repository contains infrastructure for building docker images
 containing [Cobalt](https://github.com/cobalt-org/cobalt.rs) binaries.
 
